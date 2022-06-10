@@ -1,0 +1,94 @@
+:root{
+  --primaryBlue: #051c2c;
+  --secondaryBlue: #033295;
+  --lightGray: #ddd;
+  --shadow: rgba(0, 0, 0, 0.295);
+}
+
+
+body {
+  background-color: #ddd !important;
+}
+
+.close_button_wrapper {
+  display: flex;
+  justify-content: end;
+}
+
+#close_btn {
+  padding: 20px;
+}
+
+button.btn-close:focus{
+  box-shadow: none !important;
+}
+
+.status_button_wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#status_button {
+  background-image: linear-gradient(120deg, var(--primaryBlue), var(--secondaryBlue));
+  border: none;
+  outline: none;
+  box-shadow: unset;
+  border-color: unset;
+  border-radius: 38px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--lightGray);
+  padding: 15px 40px;
+  transition: all 0.2s;
+}
+
+#status_button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px var(--shadow);
+}
+
+#status_button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.295);
+}
+
+h4 {
+  width: max-content;
+  position: relative;
+}
+
+h4::before,
+h4::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+h4::before {
+  background-color: white;
+  animation: write 1s steps(9) 0.5s forwards;
+}
+
+h4::after {
+  width: 2px;
+  background-color: black;
+  animation: write 1s steps(9) 0.5s forwards,
+   blink 750ms steps(9) infinite;
+}
+
+@keyframes write {
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes blink {
+  to {
+    background-color: transparent;
+  }
+}
