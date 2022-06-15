@@ -12,39 +12,36 @@
     />
   </head>
   <body>
- 
+    <!-- Status Button -->
+    <div class="status_button_wrapper">
+      <button
+        id="status_button"
+        data-bs-toggle="modal"
+        data-bs-target="#statusModal"
+      >
+        Check Status
+      </button>
+    </div>
 
-      <div class="status_button_wrapper">
-        <button
-          id="status_button"
-          data-bs-toggle="modal"
-          data-bs-target="#statusModal"
-        >
-          Check Status
-        </button>
-      </div>
-
-      <!-- Modal -->
-      <div class="modal fade" id="statusModal">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="close_button_wrapper">
-              <button
-                type="button"
-                class="btn-close"
-                id="close_btn"
-                data-bs-dismiss="modal"
-              ></button>
-            </div>
-            <div class="modal-body">
-              <h4 id="message">It works!</h4>
-            </div>
+    <!-- Modal -->
+    <div class="modal fade" id="statusModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close_button_wrapper">
+            <button
+              type="button"
+              class="btn-close"
+              id="close_btn"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <h4 id="message">Thanks for checking this out 😅</h4>
           </div>
         </div>
       </div>
-
+    </div>
 
     <script src="./bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./main.js"></script>
   </body>
 </html>

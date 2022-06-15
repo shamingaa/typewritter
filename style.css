@@ -5,10 +5,10 @@
   --shadow: rgba(0, 0, 0, 0.295);
 }
 
-
-body {
+body{
   background-color: #ddd !important;
 }
+
 
 .close_button_wrapper {
   display: flex;
@@ -57,6 +57,7 @@ button.btn-close:focus{
 h4 {
   width: max-content;
   position: relative;
+  font-family: "Source Code Pro", monospace;
 }
 
 h4::before,
@@ -71,14 +72,14 @@ h4::after {
 
 h4::before {
   background-color: white;
-  animation: write 1s steps(9) 0.5s forwards;
+  animation: write 1s steps(30) 0.5s forwards;
 }
 
 h4::after {
   width: 2px;
   background-color: black;
-  animation: write 1s steps(9) 0.5s forwards,
-   blink 750ms steps(9) infinite;
+  animation: write 1s steps(30) 0.5s forwards,
+   blink 750ms steps(30) infinite;
 }
 
 @keyframes write {
